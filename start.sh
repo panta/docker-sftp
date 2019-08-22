@@ -35,7 +35,7 @@ else
     useradd -d /data -m -g sftp-only -p ${ENC_PASS} -u ${USER_ID} -s /bin/false ${USER}
     usermod -aG sftp-only ${USER}
 
-    chown ${USER_ID}:${GROUP_ID} /data/incoming
+    chown ${USER_ID}:${GROUP_ID} /data/uploads
 
     if [ ! -e /data/.ssh/authorized_keys && ! -z "$PUBKEY" ]; then
         mkdir /data/.ssh

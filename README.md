@@ -6,13 +6,13 @@ SFTP Server
 
 Just use this command to start the container.
 
-```docker run --name sftp -v <host>:/data/incoming -d -P writl/sftp```
+```docker run --name sftp -v <host>:/data/uploads -d -P writl/sftp```
 
 # Persistent Pubkeys
 
 If you want to store the keys (so your fingerprint doesn't change) persistent, you can run it like that:
 
-```docker run --name sftp -v <host>:/data/incoming -v <host>:/ssh -d -P writl/sftp```
+```docker run --name sftp -v <host>:/data/uploads -v <host>:/ssh -d -P writl/sftp```
 
 # Configuration
 These options can be set: (hint: it is even possible to use '33' as gid/uid)

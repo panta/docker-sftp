@@ -10,7 +10,7 @@ RUN apt-get -q update && \
 		openssh-server mcrypt \
 	&& mkdir /var/run/sshd \
 	&& chmod 0755 /var/run/sshd \
-	&& mkdir -p /data/incoming \
+	&& mkdir -p /data/uploads \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 	&& mkdir /ssh/
@@ -18,7 +18,7 @@ RUN apt-get -q update && \
 ADD start.sh /usr/local/bin/start.sh
 ADD sshd_config /etc/ssh/sshd_config
 
-VOLUME ["/data/incoming"]
+VOLUME ["/data/uploads"]
 EXPOSE 22
 
 CMD ["/bin/bash", "/usr/local/bin/start.sh"]
