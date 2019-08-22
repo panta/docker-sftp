@@ -4,6 +4,7 @@
 Dockerfile
 README.md
 docker-compose.yml
+Makefile
 
 *.pem
 *.crt
