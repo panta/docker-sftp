@@ -8,7 +8,7 @@ Just use this command to start the container.
 
 ```bash
 $ mkdir uploads
-$ docker run --name sftp -v $(pwd)/uploads:/data/incoming -p 2222:22 --rm -it panta/docker-sftp
+$ docker run --name sftp -v $(pwd)/uploads:/data/uploads -p 2222:22 --rm -it panta/docker-sftp
 ```
 
 # Persistent Pubkeys
@@ -18,7 +18,7 @@ If you want to store the keys (so your fingerprint doesn't change) persistent, y
 ```bash
 $ mkdir uploads
 $ mkdir ssh
-$ docker run --name sftp -v $(pwd)/uploads:/data/incoming -v $(pwd)/ssh:/ssh -p 2222:22 --rm -it panta/docker-sftp
+$ docker run --name sftp -v $(pwd)/uploads:/data/uploads -v $(pwd)/ssh:/ssh -p 2222:22 --rm -it panta/docker-sftp
 ```
 
 # Configuration
