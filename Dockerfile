@@ -1,9 +1,13 @@
-FROM ubuntu:trusty
-MAINTAINER Patrick Oberdorf <patrick@oberdorf.net>
+FROM ubuntu:bionic
+MAINTAINER Marco Pantaleoni <marco.pantaleoni@gmail.com>
 
-RUN apt-get update && apt-get install -y \
-	openssh-server \
-	mcrypt \
+ENV LANG=C.UTF-8
+ENV LC_ALL=C
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get -q update && \
+	apt-get install -q -y --no-install-recommends \
+		openssh-server mcrypt \
 	&& mkdir /var/run/sshd \
 	&& chmod 0755 /var/run/sshd \
 	&& mkdir -p /data/incoming \
