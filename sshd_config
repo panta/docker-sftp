@@ -49,6 +49,9 @@ ChallengeResponseAuthentication no
 PasswordAuthentication yes
 
 X11Forwarding no
+AllowTcpForwarding no
+AllowAgentForwarding no
+PermitTunnel no
 X11DisplayOffset 10
 PrintMotd no
 PrintLastLog no
@@ -72,11 +75,14 @@ Subsystem sftp internal-sftp
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-UsePAM yes
+# UsePAM yes
+UsePAM no
 
 # SSH Chroot
 Match Group sftp-only
   ChrootDirectory %h
-  #X11Forwarding no
-  ForceCommand internal-sftp
+  X11Forwarding no
   AllowTcpForwarding no
+  AllowAgentForwarding no
+  PermitTunnel no
+  ForceCommand internal-sftp
