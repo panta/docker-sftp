@@ -18,7 +18,7 @@ If you want to store the keys (so your fingerprint doesn't change) persistent, y
 These options can be set: (hint: it is even possible to use '33' as gid/uid)
 
 - **USER**: Sets the username. (Default: "sftp", Possible Values: "<string>")
-- **PASS**: Sets the password of the User (Default: "c83eDteUDT", Possible Values: "<string>")
+- **PASS**: Sets the password of the User (Default: "VWqy62GNqYpHAL", Possible Values: "<string>")
 - **GROUP_ID**: Sets GID of the user (Default: "1000", Possible Values: "<integer>")
 - **USER_ID**: Sets UID of the user (Default: "1000", Possible Values: "<integer>")
 - **PUBKEY**: Sets PUBKEY of the user (Possible Values: "<string>")

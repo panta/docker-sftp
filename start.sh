@@ -2,7 +2,7 @@
 USER=${USER:-sftp}
 USER_ID=${USER_ID:-1000}
 GROUP_ID=${GROUP_ID:-1000}
-PASS=${PASS:-c83eDteUDT}
+PASS=${PASS:-VWqy62GNqYpHAL}
 
 for type in rsa dsa ecdsa ed25519; do
   if ! [ -e "/ssh/ssh_host_${type}_key" ]; then
